@@ -1,0 +1,14 @@
+<div class="product-wrapper" *ngIf="product" >
+    <a [routerLink]=" ['/productDetails' , product.id] " >
+        <div class="product-picture-container" >
+            <img class="product-picture" [src]="product.picture"  alt="picture">
+            <div class="view-product" >
+                Voir
+            </div>
+        </div>
+    </a>    
+    
+    <h3> {{product.name}}  </h3>
+    <p> {{product.price | currency }}  </p>
+    <button (click)="addProductToCart(product)" class="add-button" >Ajouter</button>
+</div>

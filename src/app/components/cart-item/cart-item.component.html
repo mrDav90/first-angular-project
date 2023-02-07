@@ -1,0 +1,14 @@
+<div class="cart-item-wrapper" *ngIf="cartItem" >
+    <img class="cart-item-picture" [src]="cartItem.picture"  alt="picture">
+    <div class="cart-item-content" >
+        <h3> {{cartItem.name}}  </h3>
+        <p> <b>PU : </b> {{cartItem.price | currency }}  </p>
+        <div>
+            <button (click)="decrement(cartItem)" >-</button>
+            <span> {{cartItem.quantity }} </span>
+            <button (click)="increment(cartItem)" >+</button>
+        </div>
+        <p> {{cartItem.price * cartItem.quantity | currency }} </p>
+    </div>
+   
+</div>
