@@ -1,5 +1,24 @@
+.product-details-wrapper{
+    display: flex;
+}
+
 .product-details-picture{
     width: 400px;
     height: 400px;
     object-fit: cover;
+}
+
+.content{
+    padding: 10px;
+}
+
+.add-button {
+    width: 100%;
+    background-color: #8e44ad;
+    color: #fff;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
 }

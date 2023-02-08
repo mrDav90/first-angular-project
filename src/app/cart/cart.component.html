@@ -1,12 +1,23 @@
 
 <div class="cart-header" >
     <h1>Panier</h1>
-    <button (click)="clearCart()" >Vider panier</button>
+    <button *ngIf="cart.length!==0" (click)="clearCart()" >Vider panier</button>
 </div>
-<div *ngFor="let cartItem of cart" >
-    <app-cart-item [cartItem]="cartItem" ></app-cart-item>
+<div class="empty-cart" *ngIf="cart.length ===0">
+    <p> Panier vide , ajouter des  <a routerLink="/shop" >produits</a> </p>
 </div>
-
-<div class="total-container" >
-    <h1>Total : <span> {{ total | currency }} </span> </h1>
+<div *ngIf="cart.length!==0"  >
+    <div *ngFor="let cartItem of cart" >
+        <app-cart-item 
+            [cartItem]="cartItem" 
+            (increment)="increment(cartItem)" 
+            (decrement)="decrement(cartItem)" 
+            (removeProductFromCart)="removeProductFromCart(cartItem)"  
+        >
+        </app-cart-item>
+    </div>
+    
+    <div class="total-container" >
+        <h1>Total : <span> {{ total | currency }} </span> </h1>
+    </div>
 </div>

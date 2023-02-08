@@ -7,5 +7,5 @@ import { products } from '../data/products';
   styleUrls: ['./list-products.component.scss']
 })
 export class ListProductsComponent {
-    products = [...products]
+    products : Product[] = [...products]
 }

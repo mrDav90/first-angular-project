@@ -19,4 +19,28 @@ export class CartComponent  {
     this.cart = this.cartService.clearCart();
     //window.alert("Panier vidé")
   }
+
+  increment(item : Product){
+    this.cartService.increment(item);
+    this.setCart()
+    this.setTotal()
+  }
+  decrement(item : Product){
+    this.cartService.decrement(item);
+    this.setCart()
+    this.setTotal()
+  }
+
+  removeProductFromCart(item : Product){
+    this.cartService.removeProductFromCart(item);
+    this.setCart()
+    this.setTotal()
+  }
+
+  setCart(){
+    this.cart = this.cartService.getCart();
+  }
+  setTotal() {
+    this.total = this.cartService.getTotal();
+  }
 }

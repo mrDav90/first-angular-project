@@ -1,18 +1,15 @@
 .navbar-wrapper{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
-    border-bottom: solid black 1px;
-}
-
-.content {
-    display: flex;
+    background-color: #ecf0f1;
 }
 
 .li-container{
     display: flex;
+    justify-content: center;
 }
 li{
     list-style-type: none;
@@ -22,11 +19,14 @@ li{
 
 li a {
     text-decoration: none;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
-.cart-container{
-
+.cart-container a {
+    background-color: #f39c12;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 4px;
 }
 
 .cart-container a {

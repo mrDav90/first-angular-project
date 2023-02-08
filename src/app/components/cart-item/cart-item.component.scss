@@ -5,6 +5,8 @@
     align-items: center;
     margin: 10px 0;
 
+
+
     .cart-item-picture{
         width: 150px;
         height: 150px;
@@ -14,7 +16,23 @@
 
     .cart-item-content{
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        flex-direction: row;
+        align-items: center;
+
+        .cart-item-infos{
+            margin-left: 15px;
+        }
+    }
+
+
+    .remove-product-in-cart-button{
+        background-color: firebrick;
+        color: #fff;
+        font-size: 17px;
+        padding: 0 15px;
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
     }
 }
